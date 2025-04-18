@@ -4,13 +4,9 @@ set -e  # Dừng ngay khi có lỗi
 rm -rf cmake_build
 
 # Cấu hình project với mbed-tools
-mbed-tools configure -m STM32F411_DISCOVERY -t GCC_ARM
-
-# Di chuyển vào thư mục cấu hình
-cd cmake_build/STM32F411_DISCOVERY/develop/GCC_ARM
 
 # Gọi cmake để tạo file build với Ninja
-cmake -G Ninja ../../../../
+cmake -G Ninja 
 
 # Build project
 ninja
