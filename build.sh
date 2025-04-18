@@ -1,3 +1,7 @@
-cd Using_Mbed_Tools
-chmod +x choose_to_build.sh
-./choose_to_build.sh
+cd Using_Mbed_Tools/blinky
+set -e
+rm -rf cmake_build
+mbed_tools configure -m STM32F411_DISCOVERY -t GCC_ARM
+cd cmake_build/STM32F411_DISCOVERY/develop/GCC_ARM
+cmake -G Ninja ../../../../
+ninja
