@@ -6,8 +6,8 @@ DigitalOut led3(PD_13); // LED cam
 DigitalOut led4(PD_14); // LED đỏ
 DigitalOut led5(PD_15); // LED xanh dương
 
-// UART1 trên chân PA_15 (TX), PB_7 (RX)
-UnbufferedSerial uart1(PA_15, PB_7, 115200);  // TX, RX, Baudrate
+// UART1 trên chân PA_9 (TX), PA_10 (RX)
+UnbufferedSerial uart1(PA_9, PA_10, 115200);  // TX, RX, Baudrate
 
 // Hàm nhấp nháy LED
 void blink_led(DigitalOut& led, int interval_ms) {
@@ -28,11 +28,11 @@ void print_hello() {
 
 int main() {
     // Tạo thread với các mức ưu tiên
-    Thread t1(osPriority(1));
-    Thread t2(osPriority(1));
-    Thread t3(osPriority(1));
-    Thread t4(osPriority(1));
-    Thread t_hello(osPriority(2));  // Thread in có ưu tiên cao hơn
+    Thread t1(osPriorityNormal);
+    Thread t2(osPriorityNormal);
+    Thread t3(osPriorityNormal);
+    Thread t4(osPriorityNormal);
+    Thread t_hello(osPriorityHigh);  // Thread in có ưu tiên cao hơn
 
     // Khởi động các thread
     t1.start([&]() { blink_led(led2, 200); });
