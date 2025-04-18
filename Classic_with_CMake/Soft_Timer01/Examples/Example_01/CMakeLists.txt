@@ -10,10 +10,14 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../CMakeFile")
+get_filename_component(CMAKEFILE_DIR "${CMAKE_CURRENT_LIST_DIR}" ABSOLUTE)
+get_filename_component(CMAKEFILE_DIR "${CMAKEFILE_DIR}/../../CMakeFile" ABSOLUTE)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKEFILE_DIR}")
 message(STATUS "CMAKE_MODULE_PATH = ${CMAKE_MODULE_PATH}")
-include(${CMAKE_CURRENT_LIST_DIR}/../../CMakeFile/Flag.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../../CMakeFile/CommonPath.cmake)
+
+include("${CMAKEFILE_DIR}/Flag.cmake")
+include("${CMAKEFILE_DIR}/CommonPath.cmake")
 
 set(EXECUTABLE ${PROJECT_NAME}.out)
 
