@@ -12,8 +12,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../CMakefile")
 message(STATUS "CMAKE_MODULE_PATH = ${CMAKE_MODULE_PATH}")
-include(${CMAKE_CURRENT_LIST_DIR}/../../CMakeFile/Flag.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../../CMakeFile/CommonPath.cmake)
+include(${CMAKE_MODULE_PATH}/Flag.cmake)
+include(${CMAKE_MODULE_PATH}/CommonPath.cmake)
 
 set(EXECUTABLE ${PROJECT_NAME}.out)
 
