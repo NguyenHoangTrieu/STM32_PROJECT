@@ -4,7 +4,7 @@
 DigitalOut led2(PD_12); // LED xanh lá
 DigitalOut led3(PD_13); // LED cam
 // UART1 trên chân PA_15 (TX), PB_7 (RX) 
-static BufferedSerial uart1(PA_15, PB_7);  // TX, RX, Baudrate
+Serial uart1(PA_15, PB_7);  // TX, RX, Baudrate
 
 // Hàm nhấp nháy LED
 void blink_led(DigitalOut& led, int interval_ms) {
