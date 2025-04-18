@@ -1,0 +1,57 @@
+set(STM32CUBEMX_GENERATED_FILES
+        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c 
+	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+
+        ${CMAKE_CURRENT_LIST_DIR}/../Inc/main.h
+	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_hal_conf.h
+	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_it.h
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_msp.c
+	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_it.c
+	${CMAKE_CURRENT_LIST_DIR}/../Src/system_stm32f4xx.c
+	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_timebase_tim.c
+        ${CMAKE_CURRENT_LIST_DIR}/../startup_stm32f411xe.s)
+
+set(MIDDLEWARES_ADDED
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/croutine.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/list.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/queue.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/tasks.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/timers.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c
+
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/Rec/segger_uart.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/SEGGER/SEGGER_RTT.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/SEGGER/SEGGER_SYSVIEW.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.S)
+
+set(GLOBAL_INCLUDE_DIRS
+        ${CMAKE_CURRENT_LIST_DIR}/../Inc
+        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Inc
+        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
+        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/CMSIS/Include
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/include
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/Config
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/OS
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/Third_Party/SEGGER/SEGGER)
