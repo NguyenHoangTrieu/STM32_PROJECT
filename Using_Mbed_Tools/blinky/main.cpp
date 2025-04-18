@@ -6,7 +6,7 @@ DigitalOut led3(PD_13); // LED cam
 DigitalOut led4(PD_14); // LED đỏ
 DigitalOut led5(PD_15); // LED xanh dương
 // UART1 trên chân PA_15 (TX), PB_7 (RX) 
-BufferedSerial uart1(PA_15, PB_7);  // TX, RX, Baudrate
+static BufferedSerial uart1(PA_15, PB_7);  // TX, RX, Baudrate
 
 // Hàm nhấp nháy LED
 void blink_led(DigitalOut& led, int interval_ms) {
@@ -28,6 +28,11 @@ void print_hello() {
 int main() {
     // Tạo thread với các mức ưu tiên
     uart1.set_baud(115200);
+    uart1.set_format(
+    /* bits */ 8,
+    /* parity */ BufferedSerial::None,
+    /* stop bit */ 1
+    );
     Thread t1(osPriorityNormal);
     Thread t2(osPriorityNormal);
     Thread t3(osPriorityNormal);
