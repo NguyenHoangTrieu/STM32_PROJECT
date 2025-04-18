@@ -1,5 +1,5 @@
 # Copyright (c) 2025 ARM Limited. All rights reserved.
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: Apache-2.
 
 cmake_minimum_required(VERSION 3.19.0)
 
