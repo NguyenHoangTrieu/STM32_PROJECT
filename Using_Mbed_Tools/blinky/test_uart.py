@@ -23,7 +23,7 @@ def test_uart_ch340_read(uart_ch340):
     burst_timeout = 0.01  # 10ms
     log = []
 
-    while time.time() - start_time < 10:
+    while time.time() - start_time < 60:
         now = time.time()
         if uart_ch340.in_waiting:
             data = uart_ch340.read(uart_ch340.in_waiting).decode("utf-8", errors="ignore")
