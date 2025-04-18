@@ -1,4 +1,3 @@
-#!/bin/bash
 set -e  # Dừng ngay khi có lỗi
 
 # Xóa thư mục cmake_build nếu tồn tại
