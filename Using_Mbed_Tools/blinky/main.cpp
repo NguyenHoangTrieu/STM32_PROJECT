@@ -6,6 +6,11 @@ DigitalOut led3(PD_13); // LED cam
 DigitalOut led4(PD_14); // LED đỏ
 DigitalOut led5(PD_15); // LED xanh dương
 
+// Vô hiệu hóa JTAG và chỉ giữ lại SWD
+extern "C" void __attribute__((constructor)) disable_jtag() {
+    __HAL_AFIO_REMAP_SWJ_NOJTAG();  // Vô hiệu hóa JTAG, giữ SWD
+}
+
 // UART1 trên chân PA_15 (TX), PB_7 (RX) 
 UnbufferedSerial uart1(PA_15, PB_7, 115200);  // TX, RX, Baudrate
 
