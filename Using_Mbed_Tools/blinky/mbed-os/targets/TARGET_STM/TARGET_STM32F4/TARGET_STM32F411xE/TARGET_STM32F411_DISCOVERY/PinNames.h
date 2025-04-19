@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2021 STMicroelectronics.
+ * Copyright (c) 2016-2025 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -12,10 +12,10 @@
  *
  ******************************************************************************
  *
- * Automatically generated from STM32CubeMX/db/mcu/STM32F411R(C-E)Tx.xml
+ * Automatically generated from STM32CubeMX/db/mcu/STM32F411V(C-E)Tx.xml
  */
 
-/* MBED TARGET LIST: NUCLEO_F411RE */
+/* MBED TARGET LIST: xxx */
 
 #ifndef MBED_PINNAMES_H
 #define MBED_PINNAMES_H
@@ -27,9 +27,6 @@
 extern "C" {
 #endif
 
-/* If this macro is defined, then constexpr utility functions for pin-map seach can be used. */
-#define STATIC_PINMAP_READY 1
-
 typedef enum {
     ALT0  = 0x100,
 } ALTx;
@@ -38,7 +35,9 @@ typedef enum {
     PA_0       = 0x00,
     PA_1       = 0x01,
     PA_2       = 0x02,
+    PA_2_ALT0  = PA_2  | ALT0, // same pin used for alternate HW
     PA_3       = 0x03,
+    PA_3_ALT0  = PA_3  | ALT0, // same pin used for alternate HW
     PA_4       = 0x04,
     PA_4_ALT0  = PA_4  | ALT0, // same pin used for alternate HW
     PA_5       = 0x05,
@@ -72,7 +71,6 @@ typedef enum {
     PB_9       = 0x19,
     PB_9_ALT0  = PB_9  | ALT0, // same pin used for alternate HW
     PB_10      = 0x1A,
-    PB_11	   = 0x1B,
     PB_12      = 0x1C,
     PB_12_ALT0 = PB_12 | ALT0, // same pin used for alternate HW
     PB_13      = 0x1D,
@@ -135,7 +133,7 @@ typedef enum {
     PE_14      = 0x4E,
     PE_14_ALT0 = PE_14 | ALT0, // same pin used for alternate HW
     PE_15      = 0x4F,
-    PH_0       = 0x70,  
+    PH_0       = 0x70,
     PH_1       = 0x71,
 
     /**** ADC internal channels ****/
@@ -146,29 +144,29 @@ typedef enum {
 
 #ifdef TARGET_FF_ARDUINO_UNO
     // Arduino Uno (Rev3) pins
-    ARDUINO_UNO_A0  = PA_0,
-    ARDUINO_UNO_A1  = PA_1,
-    ARDUINO_UNO_A2  = PA_4,
-    ARDUINO_UNO_A3  = PB_0,
-    ARDUINO_UNO_A4  = PC_1,
-    ARDUINO_UNO_A5  = PC_0,
+    ARDUINO_UNO_A0  = Px_x,
+    ARDUINO_UNO_A1  = Px_x,
+    ARDUINO_UNO_A2  = Px_x,
+    ARDUINO_UNO_A3  = Px_x,
+    ARDUINO_UNO_A4  = Px_x,
+    ARDUINO_UNO_A5  = Px_x,
 
-    ARDUINO_UNO_D0  = PA_3,
-    ARDUINO_UNO_D1  = PA_2,
-    ARDUINO_UNO_D2  = PA_10,
-    ARDUINO_UNO_D3  = PB_3,
-    ARDUINO_UNO_D4  = PB_5,
-    ARDUINO_UNO_D5  = PB_4,
-    ARDUINO_UNO_D6  = PB_10,
-    ARDUINO_UNO_D7  = PA_8,
-    ARDUINO_UNO_D8  = PA_9,
-    ARDUINO_UNO_D9  = PC_7,
-    ARDUINO_UNO_D10 = PB_6,
-    ARDUINO_UNO_D11 = PA_7,
-    ARDUINO_UNO_D12 = PA_6,
-    ARDUINO_UNO_D13 = PA_5,
-    ARDUINO_UNO_D14 = PB_9,
-    ARDUINO_UNO_D15 = PB_8,
+    ARDUINO_UNO_D0  = Px_x,
+    ARDUINO_UNO_D1  = Px_x,
+    ARDUINO_UNO_D2  = Px_x,
+    ARDUINO_UNO_D3  = Px_x,
+    ARDUINO_UNO_D4  = Px_x,
+    ARDUINO_UNO_D5  = Px_x,
+    ARDUINO_UNO_D6  = Px_x,
+    ARDUINO_UNO_D7  = Px_x,
+    ARDUINO_UNO_D8  = Px_x,
+    ARDUINO_UNO_D9  = Px_x,
+    ARDUINO_UNO_D10 = Px_x,
+    ARDUINO_UNO_D11 = Px_x,
+    ARDUINO_UNO_D12 = Px_x,
+    ARDUINO_UNO_D13 = Px_x,
+    ARDUINO_UNO_D14 = Px_x,
+    ARDUINO_UNO_D15 = Px_x,
 #endif
 
     // STDIO for console print
@@ -184,11 +182,11 @@ typedef enum {
 #endif
 
     /**** USB FS pins ****/
-    USB_OTG_FS_DP = PA_12,
     USB_OTG_FS_DM = PA_11,
+    USB_OTG_FS_DP = PA_12,
     USB_OTG_FS_ID = PA_10,
-    USB_OTG_FS_VBUS = PA_9,
     USB_OTG_FS_SOF = PA_8,
+    USB_OTG_FS_VBUS = PA_9,
 
     /**** OSCILLATOR pins ****/
     RCC_OSC32_IN = PC_14,
@@ -197,11 +195,16 @@ typedef enum {
     RCC_OSC_OUT = PH_1,
 
     /**** DEBUG pins ****/
-    SYS_JTMS_SWDIO = PA_13,
     SYS_JTCK_SWCLK = PA_14,
     SYS_JTDI = PA_15,
     SYS_JTDO_SWO = PB_3,
+    SYS_JTMS_SWDIO = PA_13,
     SYS_JTRST = PB_4,
+    SYS_TRACECLK = PE_2,
+    SYS_TRACED0 = PE_3,
+    SYS_TRACED1 = PE_4,
+    SYS_TRACED2 = PE_5,
+    SYS_TRACED3 = PE_6,
     SYS_WKUP = PA_0,
 
     // Not connected
@@ -209,11 +212,8 @@ typedef enum {
 } PinName;
 
 // Standardized LED and button names
-#define LED_4    PD_12 // LD4 [Green LED] (User LED 1)
-#define LED_3    PD_13 // LD3 [Orange LED] (User LED 2)
-#define LED_5    PD_14 // LD5 [Red LED] (User LED 3)
-#define LED_6    PD_15 // LD6 [Blue LED] (User LED 4)
-#define BUTTON1  PA_0  // B1 [Blue PushButton] (User Button)
+// #define LED1     Px_x   // TODO
+// #define BUTTON1  Px_x   // TODO
 
 #ifdef __cplusplus
 }

@@ -1885,6 +1885,12 @@
             "STM32F411xE"
         ]
     },
+    "STM32F411_DISCOVERY": {
+    "inherits": [
+        "MCU_STM32F411xE"
+    ],
+    "device_name": "STM32F411VETx"
+    },
     "NUCLEO_F411RE": {
         "inherits": [
             "MCU_STM32F411xE"
@@ -1896,18 +1902,6 @@
             "0740"
         ],
         "device_name": "STM32F411RETx"
-    },
-    "STM32F411_DISCOVERY": {
-    "inherits": [
-        "MCU_STM32F411xE"
-    ],
-    "supported_form_factors": [
-        "ARDUINO_UNO"
-    ],
-    "detect_code": [
-        "0720"
-    ],
-    "device_name": "STM32F411VETx"
     },
     "MTS_DRAGONFLY_F411RE": {
         "inherits": [
