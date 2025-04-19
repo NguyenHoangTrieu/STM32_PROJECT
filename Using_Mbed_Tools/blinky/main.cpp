@@ -1,12 +1,21 @@
 #include "mbed.h"
 
-// Gán LED tương ứng với chân của STM32F411 Discovery
-DigitalOut led2(PD_12); // LED xanh lá
-DigitalOut led3(PD_13); // LED cam
-// UART1 trên chân PA_15 (TX), PB_7 (RX) 
-BufferedSerial uart1(PA_15, PB_7);  // TX, RX, Baudrate
+DigitalOut led2(PD_12);
+DigitalOut led3(PD_13);
+DigitalOut led4(PD_14);
+DigitalOut led5(PD_15);
+BufferedSerial uart1(PA_15, PB_7);  // TX, RX
 
-// Hàm nhấp nháy LED
+Thread t1(osPriority(1));
+Thread t2(osPriority(1));
+Thread t3(osPriority(1));
+Thread t4(osPriority(1));
+Thread t_hello(osPriority(2));
+Thread t_hello2(osPriority(2));
+
+Ticker hello2_timer; // Timer to notify t_hello2 (Period 5s) Ticker for period, Timeout for one-shot
+
+// Thread function to blink LEDs
 void blink_led(DigitalOut& led, int interval_ms) {
     while (true) {
         led = !led;
@@ -14,31 +23,45 @@ void blink_led(DigitalOut& led, int interval_ms) {
     }
 }
 
-// Hàm in chuỗi "hello_world" mỗi 1 giây
+// Thread function: print hello_world every second
 void print_hello() {
-    const char* msg = "hello_world\n";
+    const char* msg = "\nhello_world\n";
     while (true) {
         uart1.write(msg, strlen(msg));
-        ThisThread::sleep_for(1s);
+        ThisThread::sleep_for(3s);
     }
 }
 
+// Thread function: wait for flag to print hello_world2
+void print_hello2_loop() {
+    const char* msg = "\nTimer 2 Called\n";
+    while (true) {
+        ThisThread::flags_wait_any(0x01);  // Chờ "notify"
+        uart1.write(msg, strlen(msg));
+    }
+}
+
+// Timer callback: notify t_hello2
+void hello2_notify() {
+    t_hello2.flags_set(0x01);  // Notify thread
+}
+
 int main() {
-    // Tạo thread với các mức ưu tiên
     uart1.set_baud(115200);
     uart1.set_format(
-    /* bits */ 8,
-    /* parity */ BufferedSerial::None,
-    /* stop bit */ 1
+        /* bits */ 8,
+        /* parity */ BufferedSerial::None,
+        /* stop bit */ 1
     );
-    Thread t1(osPriorityNormal);
-    Thread t2(osPriorityNormal);
-    Thread t_hello(osPriorityNormal);  // Thread in có ưu tiên cao hơn
 
-    // Khởi động các thread
     t1.start([&]() { blink_led(led2, 200); });
     t2.start([&]() { blink_led(led3, 400); });
-    t_hello.start(print_hello);  // Thread in UART
+    t3.start([&]() { blink_led(led4, 800); });
+    t4.start([&]() { blink_led(led5, 1600); });
+    t_hello.start(print_hello);
+    t_hello2.start(print_hello2_loop);
+
+    hello2_timer.attach(&hello2_notify, 5s);  // Notify mỗi 5 giây
 
     while (true) {
         ThisThread::sleep_for(1s);
