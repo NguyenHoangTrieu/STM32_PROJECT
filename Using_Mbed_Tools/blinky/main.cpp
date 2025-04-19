@@ -33,8 +33,8 @@ void print_hello() {
 }
 
 // Thread function: wait for flag to print hello_world2
-void print_hello2_loop() {
-    const char* msg = "Timer 2 Called\n";
+void print_hello2() {
+    const char* msg = "Timer Called\n";
     while (true) {
         ThisThread::flags_wait_any(0x01);  // Chờ "notify"
         uart1.write(msg, strlen(msg));
