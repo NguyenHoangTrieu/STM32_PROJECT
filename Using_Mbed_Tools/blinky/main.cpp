@@ -25,7 +25,7 @@ void blink_led(DigitalOut& led, int interval_ms) {
 
 // Thread function: print hello_world every second
 void print_hello() {
-    const char* msg = "\nhello_world\n";
+    const char* msg = "hello_world\n";
     while (true) {
         uart1.write(msg, strlen(msg));
         ThisThread::sleep_for(3s);
@@ -34,7 +34,7 @@ void print_hello() {
 
 // Thread function: wait for flag to print hello_world2
 void print_hello2_loop() {
-    const char* msg = "\nTimer 2 Called\n";
+    const char* msg = "Timer 2 Called\n";
     while (true) {
         ThisThread::flags_wait_any(0x01);  // Chờ "notify"
         uart1.write(msg, strlen(msg));
