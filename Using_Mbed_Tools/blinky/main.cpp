@@ -59,7 +59,7 @@ int main() {
     t3.start([&]() { blink_led(led4, 800); });
     t4.start([&]() { blink_led(led5, 1600); });
     t_hello.start(print_hello);
-    t_hello2.start(print_hello2_loop);
+    t_hello2.start(print_hello2);
 
     hello2_timer.attach(&hello2_notify, 5s);  // Notify mỗi 5 giây
 
