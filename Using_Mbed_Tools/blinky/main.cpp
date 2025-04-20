@@ -1,13 +1,9 @@
 #include "mbed.h"
 
-DigitalOut led2(PD_12);
-DigitalOut led3(PD_13);
-DigitalOut led4(PD_14);
-DigitalOut led5(PD_15);
+DigitalOut led3(PG_13);
+DigitalOut led4(PG_14);
 BufferedSerial uart1(PB_6, PB_7);  // TX, RX
 
-Thread t1(osPriority(1));
-Thread t2(osPriority(1));
 Thread t3(osPriority(1));
 Thread t4(osPriority(1));
 Thread t_hello(osPriority(2));
@@ -54,10 +50,8 @@ int main() {
         /* stop bit */ 1
     );
 
-    t1.start([&]() { blink_led(led2, 200); });
-    t2.start([&]() { blink_led(led3, 400); });
-    t3.start([&]() { blink_led(led4, 800); });
-    t4.start([&]() { blink_led(led5, 1600); });
+    t3.start([&]() { blink_led(led3, 400); });
+    t4.start([&]() { blink_led(led4, 800); });
     t_hello.start(print_hello);
     t_hello2.start(print_hello2);
 
