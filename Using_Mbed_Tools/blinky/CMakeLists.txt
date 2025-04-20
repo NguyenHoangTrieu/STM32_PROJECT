@@ -12,7 +12,8 @@ include(${MBED_PATH}/tools/cmake/app.cmake)
 project(${APP_TARGET})
 
 add_subdirectory(${MBED_PATH})
-
+add_subdirectory(BSP_DISCO_F429ZI)
+add_subdirectory(LCD_DISCO_F429ZI)
 add_executable(${APP_TARGET}
     main.cpp
 )
