@@ -1,6 +1,4 @@
 #include "mbed.h"
-#include "LCD_DISCO_F429ZI.h"
-//#include "LCD_DISCO_F429ZI.h"
 DigitalOut led3(PG_13);
 DigitalOut led4(PG_14);
 BufferedSerial uart1(PB_6, PB_7);  // TX, RX
