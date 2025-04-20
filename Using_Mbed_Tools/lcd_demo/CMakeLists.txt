@@ -1,11 +1,11 @@
 # Copyright (c) 2025 ARM Limited. All rights reserved.
-# SPDX-License-Identifier: Apache-2.
+# SPDX-License-Identifier: Apache-2.0
 
 cmake_minimum_required(VERSION 3.19.0)
 
-set(MBED_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../mbed-os CACHE INTERNAL "")
+set(MBED_PATH ${CMAKE_CURRENT_SOURCE_DIR}/mbed-os CACHE INTERNAL "")
 set(MBED_CONFIG_PATH ${CMAKE_CURRENT_BINARY_DIR} CACHE INTERNAL "")
-set(APP_TARGET blinky)
+set(APP_TARGET lcd_demo)
 
 include(${MBED_PATH}/tools/cmake/app.cmake)
 
