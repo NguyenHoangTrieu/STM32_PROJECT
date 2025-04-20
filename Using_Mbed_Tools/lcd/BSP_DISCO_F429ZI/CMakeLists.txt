@@ -1,0 +1,6 @@
+add_subdirectory(STM32F429I-Discovery)
+add_subdirectory(Utilities/Fonts)
+add_subdirectory(Components/Common)
+add_subdirectory(Components/ili9341)
+add_subdirectory(Components/l3gd20)
+add_subdirectory(Components/stmpe811)
