@@ -4,7 +4,6 @@ DigitalOut led2(PD_12);
 DigitalOut led3(PD_13);
 DigitalOut led4(PD_14);
 DigitalOut led5(PD_15);
-//
 BufferedSerial uart1(PB_6, PB_7);  // TX, RX
 
 Thread t1(osPriority(1));
