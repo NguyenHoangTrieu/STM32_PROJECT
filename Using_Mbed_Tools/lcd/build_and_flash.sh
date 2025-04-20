@@ -1,5 +1,4 @@
 set -e
-mbed_tools deploy
 rm -rf cmake_build
 mbed_tools compile -m DISCO_F429ZI -t GCC_ARM
 cd cmake_build/DISCO_F429ZI/develop/GCC_ARM
