@@ -17,9 +17,7 @@ add_executable(${APP_TARGET}
     main.cpp
 )
 
-target_link_libraries(${APP_TARGET} mbed-os
-                        BSP_DISCO_F429ZI
-                        LCD_DISCO_F429ZI)
+target_link_libraries(${APP_TARGET} mbed-os)
 
 mbed_set_post_build(${APP_TARGET})
 
