@@ -29,6 +29,7 @@ set(STM32CUBEMX_GENERATED_FILES
 	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_hal_conf.h
 	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_it.h
         ${CMAKE_CURRENT_LIST_DIR}/../Src/main.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbh_platform.c
         ${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_msp.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_it.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/system_stm32f4xx.c
