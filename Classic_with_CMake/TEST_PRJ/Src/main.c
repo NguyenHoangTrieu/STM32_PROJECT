@@ -47,7 +47,10 @@
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-
+TaskHandle_t xTask1;
+TaskHandle_t xTask2;
+TimerHandle_t xTimer1 = NULL;
+TimerHandle_t xTimer2 = NULL;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -55,7 +58,11 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+void vTask1Function(void *pvParameters);
+void vTask2Function(void *pvParameters);
+void vTimer1Callback(TimerHandle_t xTimer);
+void vTimer2Callback(TimerHandle_t xTimer);
+void vApplicationIdleHook(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -71,7 +78,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  BaseType_t status;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -94,7 +101,18 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  // Create tasks:
+  status = xTaskCreate(vTask1Function, "Task1", 200, NULL, 2, &xTask1);
+  configASSERT(status == pdPASS);
+  status = xTaskCreate(vTask2Function, "Task2", 200, NULL, 2, &xTask2);
+  configASSERT(status == pdPASS);
+  xTimer1 = xTimerCreate("Timer1", pdMS_TO_TICKS(500), pdTRUE, (void *) 0, vTimer1Callback);
+  configASSERT(xTimer1 != NULL);
+  xTimer2 = xTimerCreate("Timer2", pdMS_TO_TICKS(1000), pdTRUE, (void *) 0, vTimer2Callback);
+  configASSERT(xTimer2 != NULL);
+  xTimerStart(xTimer1, 0);
+  xTimerStart(xTimer2, 0);
+  vTaskStartScheduler();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -220,6 +238,29 @@ static void MX_GPIO_Init(void)
 void vApplicationIdleHook( void )
 {
   HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+}
+void vTimer1Callback(TimerHandle_t xTimer) {
+  xTaskNotify(xTask1, 0, eNoAction);
+}
+void vTimer2Callback(TimerHandle_t xTimer) {
+  xTaskNotify(xTask2, 0, eNoAction);
+}
+void vTask1Function(void *pvParameters) {
+  uint8_t *message = "Task 1 is running\r\n";
+  while (1) {
+    xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+    HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
+    HAL_UART_Transmit(&huart1, message, strlen((char *)message), 100);
+
+  }
+}
+void vTask2Function(void *pvParameters) {
+  uint8_t *message = "Task 2 is running\r\n";
+  while (1) {
+    xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+    HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_14);
+    HAL_UART_Transmit(&huart1, message, strlen((char *)message), 100);
+  }
 }
 /* USER CODE END 4 */
 
