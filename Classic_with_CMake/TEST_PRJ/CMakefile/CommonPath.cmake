@@ -23,7 +23,7 @@ set(STM32CUBEMX_GENERATED_FILES
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usph_pipes.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c
 
         ${CMAKE_CURRENT_LIST_DIR}/../Inc/main.h
 	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_hal_conf.h
