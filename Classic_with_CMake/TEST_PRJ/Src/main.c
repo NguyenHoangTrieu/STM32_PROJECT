@@ -113,6 +113,7 @@ int main(void)
   vTaskStartScheduler();
   xTimerStart(xTimer1, 0);
   xTimerStart(xTimer2, 0);
+  uint8_t message[] = "FreeRTOS started\r\n";
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -120,7 +121,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    HAL_UART_Transmit(&huart1, message, strlen(message), 100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
