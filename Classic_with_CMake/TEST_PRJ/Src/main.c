@@ -110,9 +110,9 @@ int main(void)
   configASSERT(xTimer1 != NULL);
   xTimer2 = xTimerCreate("Timer2", pdMS_TO_TICKS(1000), pdTRUE, (void *) 0, vTimer2Callback);
   configASSERT(xTimer2 != NULL);
+  vTaskStartScheduler();
   xTimerStart(xTimer1, 0);
   xTimerStart(xTimer2, 0);
-  vTaskStartScheduler();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -120,7 +120,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -246,20 +246,20 @@ void vTimer2Callback(TimerHandle_t xTimer) {
   xTaskNotify(xTask2, 0, eNoAction);
 }
 void vTask1Function(void *pvParameters) {
-  uint8_t *message = "Task 1 is running\r\n";
+  uint8_t message[] = "Task 1 is running\r\n";
   while (1) {
     xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
-    HAL_UART_Transmit(&huart1, message, strlen((char *)message), 100);
+    HAL_UART_Transmit(&huart1, message, strlen(message), 100);
 
   }
 }
 void vTask2Function(void *pvParameters) {
-  uint8_t *message = "Task 2 is running\r\n";
+  uint8_t message[] = "Task 2 is running\r\n";
   while (1) {
     xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
     HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_14);
-    HAL_UART_Transmit(&huart1, message, strlen((char *)message), 100);
+    HAL_UART_Transmit(&huart1, message, strlen(message), 100);
   }
 }
 /* USER CODE END 4 */
