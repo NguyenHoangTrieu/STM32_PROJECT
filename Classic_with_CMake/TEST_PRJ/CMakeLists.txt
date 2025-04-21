@@ -18,7 +18,6 @@ include(${CMAKE_MODULE_PATH}/CommonPath.cmake)
 set(EXECUTABLE ${PROJECT_NAME}.out)
 
 add_executable(${EXECUTABLE}
-        main.c
         ${STM32CUBEMX_GENERATED_FILES}
         ${MIDDLEWARES_ADDED})
 
