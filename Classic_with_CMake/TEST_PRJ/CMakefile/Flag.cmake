@@ -27,7 +27,7 @@ set(CXX_FLAGS
 )
 
 set(LINKER_FLAGS
-        -T${CMAKE_CURRENT_LIST_DIR}/../stm32f411vetx_flash.ld
+        -T${CMAKE_CURRENT_LIST_DIR}stm32f429zitx_flash.ld
         -mcpu=cortex-m4
         -mthumb
         -mfpu=fpv4-sp-d16
