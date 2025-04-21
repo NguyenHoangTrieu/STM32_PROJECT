@@ -48,10 +48,3 @@ add_custom_command(TARGET ${EXECUTABLE}
         POST_BUILD
         COMMAND arm-none-eabi-objcopy -O ihex ${EXECUTABLE} ${PROJECT_NAME}.hex
         COMMAND arm-none-eabi-objcopy -O binary ${EXECUTABLE} ${PROJECT_NAME}.bin)
-
-set_source_files_properties(
-        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
-        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
-        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
-        PROPERTIES
-        COMPILE_FLAGS -Wno-unused-parameter)
