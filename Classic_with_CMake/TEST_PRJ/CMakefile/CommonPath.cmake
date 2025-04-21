@@ -18,10 +18,10 @@ set(STM32CUBEMX_GENERATED_FILES
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/usbd_core.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/usbd_ctlreq.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/usbd_ioreq.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Class/CDC/Src/usbd_cdc.c
 
         ${CMAKE_CURRENT_LIST_DIR}/../Inc/main.h
 	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_hal_conf.h
@@ -31,7 +31,7 @@ set(STM32CUBEMX_GENERATED_FILES
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_it.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/system_stm32f4xx.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_timebase_tim.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Src/usb_device.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/USB_HOST.c
         ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_conf.c
         ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_desc.c
         ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_cdc_if.c
@@ -54,7 +54,7 @@ set(GLOBAL_INCLUDE_DIRS
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Inc
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/CMSIS/Include
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Inc
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Inc
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Class/CDC/Inc
         ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F
         ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/include)
