@@ -25,16 +25,6 @@ set(STM32CUBEMX_GENERATED_FILES
 	${CMAKE_CURRENT_LIST_DIR}/../Src/system_stm32f4xx.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_timebase_tim.c
         ${CMAKE_CURRENT_LIST_DIR}/../startup_stm32f429xx.s
-        
-        ${CMAKE_CURRENT_LIST_DIR}/../Src/usb_host.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbh_conf.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c
 )
 
 set(MIDDLEWARES_ADDED
@@ -55,6 +45,4 @@ set(GLOBAL_INCLUDE_DIRS
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/CMSIS/Include
         ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F
-        ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/include
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Inc
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc)
+        ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/include)
