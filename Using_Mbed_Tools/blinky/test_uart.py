@@ -1,7 +1,7 @@
 import pytest
 import serial
 import time
-from datetime import datetime
+from datetime import datetime 
 
 @pytest.fixture(scope="module")
 def uart_ch340():
