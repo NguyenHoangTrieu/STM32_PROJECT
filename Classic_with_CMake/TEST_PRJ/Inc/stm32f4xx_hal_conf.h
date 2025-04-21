@@ -381,7 +381,6 @@
 
 #ifdef HAL_PWR_MODULE_ENABLED
  #include "stm32f4xx_hal_pwr.h"
- #include "stm32f4xx_hal_pwr_ex.h"
 #endif /* HAL_PWR_MODULE_ENABLED */
 
 #ifdef HAL_RNG_MODULE_ENABLED
