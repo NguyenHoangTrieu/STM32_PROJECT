@@ -1,7 +1,7 @@
 #include "mbed.h"
 DigitalOut led3(PG_13);
 DigitalOut led4(PG_14);
-BufferedSerial uart1(PB_6, PB_7); // TX, RX
+BufferedSerial uart1(PA_9, PA_10); // TX, RX
 
 Thread t3(osPriority(1));
 Thread t4(osPriority(1));
