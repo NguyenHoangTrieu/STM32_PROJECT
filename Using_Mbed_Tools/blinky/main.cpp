@@ -48,8 +48,8 @@ int main() {
     uart2.set_baud(115200);
     uart2.set_format(8, BufferedSerial::None, 1);
 
-    t3.start(callback(blink_led, std::ref(led3), 400));
-    t4.start(callback(blink_led, std::ref(led4), 800));
+    t3.start([&]() { blink_led(led3, 400); });
+    t4.start([&]() { blink_led(led4, 800); });
     t_hello.start(print_hello);
     t_hello2.start(print_hello2);
 
