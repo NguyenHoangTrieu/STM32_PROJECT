@@ -17,11 +17,13 @@ set(STM32CUBEMX_GENERATED_FILES
 	${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c 
-        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c 
+        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/usbd_core.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/usbd_ctlreq.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/usbd_ioreq.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Class/CDC/Src/usbd_cdc.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_HOST_Library/Core/Src/uspd_pipes.c
 
         ${CMAKE_CURRENT_LIST_DIR}/../Inc/main.h
 	${CMAKE_CURRENT_LIST_DIR}/../Inc/stm32f4xx_hal_conf.h
@@ -31,10 +33,8 @@ set(STM32CUBEMX_GENERATED_FILES
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_it.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/system_stm32f4xx.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_timebase_tim.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Src/USB_HOST.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/usb_host.c
         ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_conf.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_desc.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_cdc_if.c
         ${CMAKE_CURRENT_LIST_DIR}/../startup_stm32f429xx.s)
 
 set(MIDDLEWARES_ADDED
