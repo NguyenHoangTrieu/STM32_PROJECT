@@ -3,7 +3,7 @@ import serial
 import time
 from datetime import datetime
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="module") 
 def uart_ch340():
     port = "/dev/ttyUSB0"
     try:
