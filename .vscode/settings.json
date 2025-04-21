@@ -5,6 +5,9 @@
         "usbh_platform.h": "c",
         "usb_host.h": "c",
         "stm32f4xx.h": "c",
-        "stm32f429xx.h": "c"
+        "stm32f429xx.h": "c",
+        "usbh_core.h": "c",
+        "usbh_conf.h": "c",
+        "usbh_def.h": "c"
     }
 }
