@@ -31,6 +31,10 @@ set(STM32CUBEMX_GENERATED_FILES
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_it.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/system_stm32f4xx.c
 	${CMAKE_CURRENT_LIST_DIR}/../Src/stm32f4xx_hal_timebase_tim.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/usb_device.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_conf.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_desc.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Src/usbd_cdc_if.c
         ${CMAKE_CURRENT_LIST_DIR}/../startup_stm32f429xx.s)
 
 set(MIDDLEWARES_ADDED
