@@ -23,7 +23,7 @@
 #include "usbh_platform.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "stm32f429xx.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
