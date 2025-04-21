@@ -113,7 +113,6 @@ int main(void)
   vTaskStartScheduler();
   xTimerStart(xTimer1, 0);
   xTimerStart(xTimer2, 0);
-  const char *msg = "Hello via VCP\r\n";
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,8 +120,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
-    HAL_Delay(1000);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
