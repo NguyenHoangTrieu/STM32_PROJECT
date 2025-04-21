@@ -1,16 +1,19 @@
 #include "mbed.h"
+
 DigitalOut led3(PG_13);
 DigitalOut led4(PG_14);
-BufferedSerial uart1(PB_6, PB_7); // TX, RX
+
+// ✅ Thay UART1 bằng USART2 - kết nối với VCP thông qua ST-Link
+BufferedSerial uart2(PA_2, PA_3); // VCP TX (PA2), RX (PA3)
 
 Thread t3(osPriority(1));
 Thread t4(osPriority(1));
 Thread t_hello(osPriority(2));
 Thread t_hello2(osPriority(2));
 
-Ticker hello2_timer; // Timer to notify t_hello2 (Period 5s) Ticker for period, Timeout for one-shot
+Ticker hello2_timer; // Timer to notify t_hello2 every 5s
 
-// Thread function to blink LEDs
+// Blink LED
 void blink_led(DigitalOut& led, int interval_ms) {
     while (true) {
         led = !led;
@@ -18,43 +21,39 @@ void blink_led(DigitalOut& led, int interval_ms) {
     }
 }
 
-// Thread function: print hello_world every second
+// Thread 1: print message every 3 seconds
 void print_hello() {
     const char* msg = "hello_world\n";
     while (true) {
-        uart1.write(msg, strlen(msg));
+        uart2.write(msg, strlen(msg));
         ThisThread::sleep_for(3s);
     }
 }
 
-// Thread function: wait for flag to print hello_world2
+// Thread 2: print message every 5 seconds (when notified)
 void print_hello2() {
     const char* msg = "Timer Called\n";
     while (true) {
-        ThisThread::flags_wait_any(0x01);  // Chờ "notify"
-        uart1.write(msg, strlen(msg));
+        ThisThread::flags_wait_any(0x01);
+        uart2.write(msg, strlen(msg));
     }
 }
 
-// Timer callback: notify t_hello2
+// Notify thread t_hello2
 void hello2_notify() {
-    t_hello2.flags_set(0x01);  // Notify thread
+    t_hello2.flags_set(0x01);
 }
 
 int main() {
-    uart1.set_baud(115200);
-    uart1.set_format(
-        /* bits */ 8,
-        /* parity */ BufferedSerial::None,
-        /* stop bit */ 1
-    );
+    uart2.set_baud(115200);
+    uart2.set_format(8, BufferedSerial::None, 1);
 
-    t3.start([&]() { blink_led(led3, 400); });
-    t4.start([&]() { blink_led(led4, 800); });
+    t3.start(callback(blink_led, std::ref(led3), 400));
+    t4.start(callback(blink_led, std::ref(led4), 800));
     t_hello.start(print_hello);
     t_hello2.start(print_hello2);
 
-    hello2_timer.attach(&hello2_notify, 5s);  // Notify mỗi 5 giây
+    hello2_timer.attach(&hello2_notify, 5s);
 
     while (true) {
         ThisThread::sleep_for(1s);

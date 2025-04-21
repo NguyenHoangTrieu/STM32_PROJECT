@@ -5,7 +5,7 @@ from datetime import datetime
 
 @pytest.fixture(scope="module")
 def uart_ch340():
-    port = "/dev/ttyUSB0"
+    port = "/dev/ttyACM0"
     try:
         ser = serial.Serial(port=port, baudrate=115200, timeout=1)
     except serial.SerialException:
@@ -34,7 +34,7 @@ def test_uart_ch340_read(uart_ch340):
             log.append(f"[{timestamp}] {buffer.strip()}")
             buffer = ""
 
-    print("CH340 Output:")
+    print("UART Output:")
     for entry in log:
         print(entry)
 
