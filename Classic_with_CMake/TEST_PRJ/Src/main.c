@@ -113,7 +113,6 @@ int main(void)
   vTaskStartScheduler();
   xTimerStart(xTimer1, 0);
   xTimerStart(xTimer2, 0);
-  uint8_t message[] = "FreeRTOS started\r\n";
   /* USER CODE END 2 */
 
   /* Infinite loop */
