@@ -23,7 +23,7 @@ add_executable(${EXECUTABLE}
 
 target_compile_definitions(${EXECUTABLE} PRIVATE
         -DUSE_HAL_DRIVER
-        -DSTM32F413xx
+        -DSTM32F429xx
 )
 
 target_include_directories(${EXECUTABLE} PRIVATE
