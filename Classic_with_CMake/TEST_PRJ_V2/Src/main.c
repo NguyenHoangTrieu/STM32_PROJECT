@@ -125,7 +125,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-
+    HAL_Uart_Transmit(&huart1, message, sizeof(message), HAL_MAX_DELAY);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
