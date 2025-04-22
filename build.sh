@@ -1,4 +1,4 @@
-cd Classic_with_CMake/TEST_PRJ
+cd Classic_with_CMake/TEST_PRJ_V2
 dos2unix build_and_flash.sh
 chmod +x build_and_flash.sh
 ./build_and_flash.sh
