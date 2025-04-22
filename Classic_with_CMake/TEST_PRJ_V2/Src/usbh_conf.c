@@ -23,7 +23,7 @@
 #include "usbh_platform.h"
 
 /* USER CODE BEGIN Includes */
-#define USB_OTG_HS          ((USB_OTG_GlobalTypeDef *) USB_OTG_HS_PERIPH_BASE)
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
