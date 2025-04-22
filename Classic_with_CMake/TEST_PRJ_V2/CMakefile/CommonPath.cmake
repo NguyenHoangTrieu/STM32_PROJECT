@@ -45,10 +45,10 @@ set(MIDDLEWARES_ADDED
         ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c 
         ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c
         ${CMAKE_CURRENT_LIST_DIR}/../Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbd_core.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbd_ctlreq.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbd_ioreq.c
-        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbd_cdc.c)
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+        ${CMAKE_CURRENT_LIST_DIR}/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c)
 
 set(GLOBAL_INCLUDE_DIRS
         ${CMAKE_CURRENT_LIST_DIR}/../Inc
