@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "stm_queue.h": "c",
+        "main.h": "c",
+        "app_entry.h": "c",
+        "stm32wbxx_hal.h": "c",
+        "app_conf.h": "c",
+        "dbg_trace.h": "c"
+    }
+}

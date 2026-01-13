@@ -1,0 +1,13 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "main.h": "c",
+        "cmsis_os.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "usbd_cdc.h": "c",
+        "usbd_desc.h": "c",
+        "usbd_cdc_if.h": "c",
+        "usb_device.h": "c",
+        "usbd_core.h": "c"
+    }
+}

@@ -1,0 +1,27 @@
+# ninja log v6
+15	241	7860316532985486	CMakeFiles/Test_WB55_1.dir/startup_stm32wb55xx_cm4.s.obj	b0b5dd1524737441
+31	263	7860316533144296	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_ll_rcc.c.obj	638f324056024f61
+10	275	7860316532935269	CMakeFiles/Test_WB55_1.dir/Src/sysmem.c.obj	b71d8478cba49d02
+13	340	7860316532965502	CMakeFiles/Test_WB55_1.dir/Src/syscalls.c.obj	147fdb83ab1faae1
+57	659	7860316533401789	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_hsem.c.obj	f38b1d8d8b37fd2d
+2	665	7860316532851850	CMakeFiles/Test_WB55_1.dir/Src/main.c.obj	cc58ba97af6fbfc8
+18	684	7860316533005496	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Src/system_stm32wbxx.c.obj	1501cff7140b6cb6
+6	689	7860316532884776	CMakeFiles/Test_WB55_1.dir/Src/stm32wbxx_it.c.obj	b7fb6ed59fdfec95
+8	695	7860316532905295	CMakeFiles/Test_WB55_1.dir/Src/stm32wbxx_hal_msp.c.obj	68f9f22f324999e1
+23	698	7860316533065491	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart_ex.c.obj	fd219aedbc7d3dc4
+45	724	7860316533296556	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_flash_ex.c.obj	d10fab3f98d2f735
+52	762	7860316533350150	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_gpio.c.obj	4d79cd59be9a61e3
+65	764	7860316533476819	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_dma_ex.c.obj	400ef8d6b4291c2d
+61	783	7860316533446799	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_dma.c.obj	fda0b33304269a28
+41	794	7860316533235412	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_flash.c.obj	ced1a83841b778ed
+27	850	7860316533104162	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c.obj	4c398f07e49a8f9c
+36	856	7860316533185294	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc_ex.c.obj	e2b9145f4c8208fd
+244	860	7860316535266100	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_pwr.c.obj	d9f2fdfb317ba07e
+276	923	7860316535587000	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_cortex.c.obj	7eac4f6c1c6e090
+264	926	7860316535469374	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_pwr_ex.c.obj	208fdabf00f4228b
+21	940	7860316533035525	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c.obj	13e31e3d944d16fe
+340	1045	7860316536237312	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal.c.obj	3c2c019fe932ba1a
+661	1104	7860316539441378	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_exti.c.obj	33ebb3b8c812be08
+668	1152	7860316539518215	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc.c.obj	18a5f9c242dec56b
+684	1169	7860316539673789	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c.obj	9c37799d4447b78d
+1169	1421	7860316544524353	Test_WB55_1.elf	892916492d7c4512

@@ -1,0 +1,12 @@
+# ninja log v6
+13	72	7824765085471891	CMakeFiles/XXXXXXX.dir/startup_stm32f407xx.s.obj	6f854e80f049ce84
+7	95	7824765085421884	CMakeFiles/XXXXXXX.dir/Src/sysmem.c.obj	b3dd6b564ee520c5
+11	131	7824765085451921	CMakeFiles/XXXXXXX.dir/Src/syscalls.c.obj	269f5a5c10df5645
+15	216	7824765085501900	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Src/system_stm32f4xx.c.obj	4346d054ef0fc665
+5	219	7824765085401868	CMakeFiles/XXXXXXX.dir/Src/stm32f4xx_it.c.obj	98b7c09c7822e327
+18	233	7824765085531895	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj	39528b0180cd4f95
+29	243	7824765085651902	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj	e71e97077a44782e
+26	251	7824765085611914	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj	506b64a640382658
+21	252	7824765085561909	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj	be3bd89c91b50202
+3	252	7824765085371886	CMakeFiles/XXXXXXX.dir/Src/main.c.obj	2fd76680cc5c5f8
+253	353	7824765087872447	XXXXXXX.elf	eacf5f35a03cff1f

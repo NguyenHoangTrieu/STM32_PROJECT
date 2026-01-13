@@ -1,0 +1,12 @@
+# ninja log v6
+11	76	7823689193573221	CMakeFiles/baremetal_test.dir/startup_stm32f411xe.s.obj	c0457bed7198d996
+8	124	7823689193533219	CMakeFiles/baremetal_test.dir/Src/sysmem.c.obj	be3ae930d8cb897b
+10	142	7823689193553205	CMakeFiles/baremetal_test.dir/Src/syscalls.c.obj	f8970052c4331d7e
+15	181	7823689193603223	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Src/system_stm32f4xx.c.obj	5ace20fb80048e42
+18	204	7823689193643207	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj	49df0dc1742e1a4d
+29	206	7823689193743219	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj	7d8f91aefd2aa55c
+5	212	7823689193503435	CMakeFiles/baremetal_test.dir/Src/stm32f4xx_it.c.obj	a2bd051ae367267b
+22	223	7823689193673205	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj	4efa63b97c713796
+2	224	7823689193483402	CMakeFiles/baremetal_test.dir/Src/main.c.obj	9e3771aa78f3126a
+26	237	7823689193713205	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj	b23ccd4f7d8a50fe
+237	314	7823689195828991	baremetal_test.elf	5b86f9499ef86109

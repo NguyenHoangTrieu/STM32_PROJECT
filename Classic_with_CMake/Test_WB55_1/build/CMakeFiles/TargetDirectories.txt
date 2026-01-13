@@ -1,0 +1,6 @@
+C:/embedded/STM32_PROJECT/Classic_with_CMake/Test_WB55_1/build/CMakeFiles/Test_WB55_1.dir
+C:/embedded/STM32_PROJECT/Classic_with_CMake/Test_WB55_1/build/CMakeFiles/edit_cache.dir
+C:/embedded/STM32_PROJECT/Classic_with_CMake/Test_WB55_1/build/CMakeFiles/rebuild_cache.dir
+C:/embedded/STM32_PROJECT/Classic_with_CMake/Test_WB55_1/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/embedded/STM32_PROJECT/Classic_with_CMake/Test_WB55_1/build/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/embedded/STM32_PROJECT/Classic_with_CMake/Test_WB55_1/build/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
